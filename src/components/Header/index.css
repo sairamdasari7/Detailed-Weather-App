@@ -1,0 +1,96 @@
+.dark-mode .search {
+  background: linear-gradient(135deg, #4527a0, #311b92); /* Dark purple */
+  color: #ffffff;
+}
+
+.app-header {
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light-mode {
+  background: linear-gradient(135deg, #e0f7fa, #ffebee); /* Teal and coral */
+  color: #333333;
+}
+
+.dark-mode {
+  background: linear-gradient(135deg, #1a237e, #283593, #303f9f); /* Dark purple and blue */
+  color: #ffffff;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.toggle-container span {
+  margin-right: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #032642;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.span-element {
+  font-size: 15px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+.light-mode .span-element {
+  color: #333333;
+}
+
+.dark-mode .span-element {
+  color: #ffffff;
+}

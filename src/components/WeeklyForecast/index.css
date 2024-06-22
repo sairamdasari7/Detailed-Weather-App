@@ -1,0 +1,51 @@
+.weekly-forecast {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .weekly-forecast {
+  background: linear-gradient(135deg, #4b6cb7, #182848); /* Dark blue and dark purple */
+  color: #ffffff;
+}
+
+.light-mode .weekly-forecast {
+  background: linear-gradient(135deg, #a8edea, #fed6e3); /* Light teal and light coral */
+  color: #333333;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+
+.forecast-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.forecast-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.dark-mode .forecast-item {
+  background-color: rgba(50, 50, 50, 0.8); /* Dark gray */
+}
+
+@media (min-width: 768px) {
+  .forecast-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .forecast-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

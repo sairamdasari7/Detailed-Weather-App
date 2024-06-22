@@ -1,0 +1,29 @@
+.search {
+  margin: 20px 0;
+}
+
+.search input {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+.search button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #66afb7; /* Teal button */
+  border: none;
+  padding: 5px;
+}
+
+.dark-mode .search button {
+  background-color: #220240; /* Dark purple button */
+  color: #ffffff;
+}
+
+.dark-mode .search {
+  background: linear-gradient(135deg, #4527a0, #311b92); /* Dark purple */
+  color: #ffffff;
+}

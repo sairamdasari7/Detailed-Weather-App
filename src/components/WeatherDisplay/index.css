@@ -1,0 +1,24 @@
+.weather-display {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .weather-display {
+  background: linear-gradient(135deg, #4527a0, #311b92); /* Dark purple */
+  color: #ffffff;
+}
+
+.light-mode .weather-display {
+  background: linear-gradient(135deg, #e0f7fa, #ffebee); /* Teal and coral */
+  color: #333333;
+}
+
+.weather-display img {
+  width: 100px;
+  height: 100px;
+}

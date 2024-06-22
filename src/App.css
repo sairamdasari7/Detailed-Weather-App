@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background: linear-gradient(135deg, #e0f7fa, #ffebee); /* Teal and coral */
+  color: #333333;
 }
 
-.App-link {
-  color: #61dafb;
+body.dark-mode {
+  background: linear-gradient(135deg, #1a237e, #283593, #303f9f); /* Shades of dark purple and blue */
+  color: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app {
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px;
+}
+
+.weather-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.weather-display,
+.weekly-forecast {
+  flex: 1;
+  max-width: 100%;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .weather-display,
+.dark-mode .weekly-forecast {
+  background: linear-gradient(135deg, #4527a0, #311b92); /* Dark purple gradients */
+  color: #ffffff;
+}
+
+.light-mode .weather-display,
+.light-mode .weekly-forecast {
+  background: linear-gradient(135deg, #e0f7fa, #ffebee); /* Teal and coral gradients */
+  color: #333333;
+}
+
+.weather-display img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.weekly-forecast .forecast-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.weekly-forecast .forecast-item {
+  flex: 1 0 40%; /* Adjust item width as needed */
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .weekly-forecast .forecast-item {
+  background-color: rgba(69, 39, 160, 0.8); /* Dark purple */
+}
+
+@media (max-width: 768px) {
+  .weather-container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .weather-display,
+  .weekly-forecast {
+    margin: 10px 0;
   }
+
+  .weekly-forecast .forecast-item {
+    flex-basis: 100%;
+  }
+}
+
+.dark-mode .search {
+  background: linear-gradient(135deg, #4527a0, #311b92); /* Dark purple gradients */
+  color: #ffffff;
 }
